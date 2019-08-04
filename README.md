@@ -32,11 +32,14 @@ The commented lines at the end can be uncommented one by one to see graphs or in
 
 ### Insights:
 1. Detecting the change in buyers trend when a product price fluctuates for users who has subscription to certain products
-> Initially we drilled down to how 
+> Initially we drilled down to how many times a price of the product is changed. Based on that how is affects the orders with old and new selling rate. On the basis of these order details, the orders are further drilled down to subscribed and unsbscribed. These details are compared with new price of the product to check how many users have moved from subscription to non-subscription and vice versa once there was a price change.
+
+2. Route Delivery
+> Listing down the routes with maximum order delivered which can help in predicting how many delivery persons will be required in future.
 
 ### Recommendation Engine
 The insights generated can be used to train the engine to suggest users relevant products. We were planning to build an engine powered by Reinforcement Learning where it would learn by itself to recommend the user based on click history.
-In interest of time, we have leveraged AWS Personalize which helps in building the recommendation engine in 3 ways. One by provinding best recommendation to the user by using HRRN. Another by proving the best recommendation from the past order history using Personalized Ranking and lastly using SIMS one can recommend another item to the user based on the current item viewed.
+In interest of time, we have leveraged AWS Personalize which helps in building the recommendation engine in 3 ways. One by provinding best recommendation to the user by using HRRN. Another by proving the best recommendation from the past order history using Personalized Ranking and lastly using SIMS one can recommend another item to the user based on the current item viewed. 
 
 ### Milkbasket quest to find the name of the city in which it is going to launch?
 
