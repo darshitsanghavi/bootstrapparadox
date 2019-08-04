@@ -37,6 +37,9 @@ The commented lines at the end can be uncommented one by one to see graphs or in
 2. Route Delivery
 > Listing down the routes with maximum order delivered which can help in predicting how many delivery persons will be required in future.
 
+3. Order Quantity
+> Visualizing the total quantity of products being ordered by a user which can help in targetting some prooducts from another region to potential users like a canary deployment.
+
 ### Recommendation Engine
 The insights generated can be used to train the engine to suggest users relevant products. We were planning to build an engine powered by Reinforcement Learning where it would learn by itself to recommend the user based on click history.
 In interest of time, we have leveraged AWS Personalize which helps in building the recommendation engine in 3 ways. One by provinding best recommendation to the user by using HRRN. Another by proving the best recommendation from the past order history using Personalized Ranking and lastly using SIMS one can recommend another item to the user based on the current item viewed. 
