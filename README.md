@@ -28,7 +28,7 @@ https://skillenza.com/challenge/bootstrap-paradox/checkpoint/submit/1559
 
 ## Solution
 [Python script to generate graphs](milkbsk_data_explore.py). 
-The commented lines at the end can be uncommented one by one to see graphs or insights one by one and uncommenting all will generate all graphs at the same time.
+To run the code ```python milkbsk_data_explore.py```
 
 ### Insights:
 1. Detecting the change in buyers trend when a product price fluctuates for users who has subscription to certain products
