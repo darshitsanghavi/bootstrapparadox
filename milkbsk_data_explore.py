@@ -138,15 +138,22 @@ def time_analysis(sales_dataframe):
     plt.ylabel('counts')
     plt.xlabel('routes')
     plt.show()
-    
+
+def user_migration(sales_dataframe):
+    user_mig = sales_dataframe[['product_id','customer_id','product_addedtobasket_on','subscription']][sales_dataframe['subscription']==1].groupby(['product_id','customer_id','product_addedtobasket_on']).apply(np.unique)
+    print(user_mig)
+    user_notsub = sales_dataframe[['product_id','customer_id','product_addedtobasket_on','subscription']][sales_dataframe['subscription']==0].groupby(['product_id','customer_id','product_addedtobasket_on']).apply(np.unique)
+    print(user_notsub)
+
 def run_data_analysis():
     sales_dataframe = load_sale_data()
-    #check_data_quality(sales_dataframe)
-    #quantity_of_product_purchased(sales_dataframe)
-    #highest_selling_manufacturer(sales_dataframe,'manufacturer_id')
-    #price_change_product(sales_dataframe)
-    #factor_subscrip_pricechange(sales_dataframe)
-    #product_trending_cities(sales_dataframe)
+    check_data_quality(sales_dataframe)
+    quantity_of_product_purchased(sales_dataframe)
+    highest_selling_manufacturer(sales_dataframe,'manufacturer_id')
+    price_change_product(sales_dataframe)
+    factor_subscrip_pricechange(sales_dataframe)
+    product_trending_cities(sales_dataframe)
     time_analysis(sales_dataframe)
+    user_migration(sales_dataframe)
 
 run_data_analysis()
